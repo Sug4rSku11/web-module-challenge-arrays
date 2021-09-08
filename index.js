@@ -143,7 +143,8 @@ Use the removeFlavorByName function below to do the following:
 */
 
 function removeFlavorByName(originalFlavors){
-  
+  const lessFlavors = originalFlavors.slice('Vanilla');
+  return lessFlavors;
 }
 
 
@@ -168,8 +169,14 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(originalFlavors){
+  let resultFlavors = [];
+  for (let i = 0; i < originalFlavors.length; i++){
+    if (originalFlavors[i].includes('Chocolate')){
+      resultFlavors.push(originalFlavors[i]);
+    }
+  }
+  return resultFlavors;
 }
 
 
