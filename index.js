@@ -142,11 +142,14 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(originalFlavors){
-  const lessFlavors = originalFlavors.slice('Vanilla');
+function removeFlavorByName(lessFlavors, flavor) {
+  for (let i = 0; i < lessFlavors.length; i++){
+    if (lessFlavors[i] === flavor) {
+      lessFlavors.splice(i, 1);
+    }
+  }
   return lessFlavors;
 }
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
